@@ -1,0 +1,43 @@
+/** Layout **/
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 48px;
+
+  .info-row {
+    float: left;
+  }
+
+  .panel {
+    position: fixed;
+    font-family: 'Oswald', Impact, sans-serif;
+    font-size: 12.5px;
+    bottom: 6px;
+    text-transform: uppercase;
+    left: 50%;
+    width:762px;
+    height: 93px;
+    margin-left: -381px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .panel-mobile {
+    position: fixed;
+    top: 0;
+    width:100%;
+    height: $panel-height-mobile;
+    background: #000;
+    text-align: center;
+    z-index: 1000;
+  }
+
+}
+
+
+@media only screen and (min-width : 320px) and (max-width : 667px) {
+  .wrapper {
+    width: 100%;
+  }
+}

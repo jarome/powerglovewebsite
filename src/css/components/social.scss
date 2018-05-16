@@ -1,0 +1,83 @@
+/** Social **/
+
+ul.social-links {
+  list-style: none;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+ul.social-links li {
+  height: 24px;
+  float: left;
+  margin: 0 8px;
+}
+ul.social-links li a {
+  display: block;
+  text-indent: -9999px;
+  height: 24px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+ul.social-links li a:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+  filter: alpha(opacity=1);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+}
+
+ul.social-links a.facebook {
+  background: url(../images/social/facebook-icon-2x.png) no-repeat;
+  background-size: 11.5px 23.5px;
+  width: 11.5px;
+}
+ul.social-links a.twitter {
+  background: url(../images/social/twitter-icon-2x.png) no-repeat;
+  background-size: 23.5px 16px;
+  background-position: 0px 5px;
+  width: 23.5px;
+}
+ul.social-links a.apple {
+  background: url(../images/social/apple-icon-2x.png) no-repeat;
+  background-size: 19px 23.5px;
+  background-position: 0px 0px;
+  width: 19px;
+}
+ul.social-links a.youtube {
+  background: url(../images/social/yt-icon-2x.png) no-repeat;
+  background-size: 20px 23.5px;
+  width: 20px;
+}
+ul.social-links a.soundcloud {
+  background: url(../images/social/soundcloud-icon-2x.png) no-repeat;
+  background-size: 25.5px 11px;
+  background-position: 0px 7px;
+  width: 26px;
+}
+ul.social-links a.tumblr {
+  background: url(../images/social/tumblr-icon-2x.png) no-repeat;
+  background-size: 13px 20.5px;
+  background-position: 0px 4px;
+  width: 13px;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 667px) {
+  ul.social-links li a {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+  }
+  ul.social-links {
+    margin-left: 0;
+  }
+}

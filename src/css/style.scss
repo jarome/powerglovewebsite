@@ -1,0 +1,200 @@
+/**@charset "UTF-8";**/
+@import "reset.css";
+
+
+/** Vars **/
+
+$panel-height-mobile: 50px;
+$navigation-item-height-mobile: 60px;
+
+
+/*
+	----------------------------
+	HTML SELECTORS
+	____________________________
+*/
+
+body, html {
+	height: 100%;
+}
+
+body {
+	background: #000;
+	font:11px/21px Helvetica, Arial, sans-serif;
+	color: #000; margin: 0;
+	padding: 0;
+	background-size: cover;
+}
+
+a:link {
+	color: #ffffff;
+	text-decoration: none;
+}
+a:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+a:active { color: #eee; text-decoration: none; }
+
+h1, h2 { font-size: 26px; line-height: 28px; font-weight: normal; letter-spacing: -1px; color: #fff; }
+h3 { font-size: 18px; font-weight: normal; margin: 8px 0; }
+h4 { font-size: 14px; font-weight: normal; margin: 0; }
+h5 { font-size: 12px; font-weight: normal; margin: 0; }
+ul { margin-left: 20px; }
+ol { margin-left: 36px; }
+
+/** General Styles **/
+
+#itunes_pg {margin: 0 0 0 226px;}
+	
+
+.copyright {
+ opacity: .3;
+ margin: 0 3px 0 5px !important;
+}
+
+
+/** Miscellaneous **/
+
+ul li a {cursor:pointer;}
+a.download img {cursor:pointer;}
+a:link.highlight {
+	color: #ffffff
+}
+
+.mute-audio {
+	position: fixed;
+	right: 18px;
+	top: 16px;
+	//top: 7px;
+	//right: 9px;
+	width: 20px;
+	height: 20px;
+	z-index: 1000;
+	text-indent: -9999px;
+	cursor: pointer;
+	background: url('../images/audio-icon-2x.png') no-repeat center center;
+	background-size: 20px 20px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	-moz-opacity: 0.3;
+	-khtml-opacity: 0.3;
+	opacity: 0.3;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+	&:hover {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+		filter: alpha(opacity=1);
+		-moz-opacity: 1;
+		-khtml-opacity: 1;
+		opacity: 1;
+	}
+	&.is-mute {
+		background: url('../images/audio-icon-mute-2x.png') no-repeat center center;
+		background-size: 20px 20px;
+	}
+}
+
+@-webkit-keyframes spin {
+	0%  {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(360deg);}
+}
+
+.refresh-video {
+	position: fixed;
+	right: 47px;
+	top: 18px;
+	//top: 9px;
+	//right: 36px;
+	width: 20px;
+	height: 17px;
+	z-index: 1000;
+	text-indent: -9999px;
+	cursor: pointer;
+	background: url('../images/refresh-icon-2x.png') no-repeat center center;
+	background-size: 18px 15px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	-moz-opacity: 0.3;
+	-khtml-opacity: 0.3;
+	opacity: 0.3;
+	transition: opacity .25s ease-in-out, transform;
+	-moz-transition: opacity .25s ease-in-out, -moz-transform;
+	-webkit-transition: opacity .25s ease-in-out, -webkit-transform;
+
+	transform-origin: 9px 8.5px;
+	&:hover {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+		filter: alpha(opacity=1);
+		-moz-opacity: 1;
+		-khtml-opacity: 1;
+		opacity: 1;
+	}
+	&.is-loading {
+		-webkit-transition-duration: 0.8s;
+		-moz-transition-duration: 0.8s;
+		-o-transition-duration: 0.8s;
+		transition-duration: 0.8s;
+		webkit-animation: spin 4s infinite linear;
+		animation: spin 4s infinite linear;
+	}
+}
+
+.static-video-loop {
+	&.static-video-loop__sign {
+		background: url('../images/loops/loop-sign.gif') no-repeat center center;
+		background-size: cover;
+	}
+	&.static-video-loop__police {
+		background: url('../images/loops/loop-police.gif') no-repeat center center;
+		background-size: cover;
+	}
+	&.static-video-loop__taxi {
+		background: url('../images/loops/loop-taxi.gif') no-repeat center center;
+		background-size: cover;
+	}
+	&.static-video-loop__puddle {
+		background: url('../images/loops/loop-puddle.gif') no-repeat center center;
+		background-size: cover;
+	}
+}
+
+/*
+	----------------------------
+	UTILITY CLASSES
+	____________________________
+*/
+
+div.clear { overflow: hidden; height: 1px; clear: both; }
+img.alignRight { float: right; margin: 0 0 15px 15px; }
+img.alignLeft { float: left; margin: 0 15px 15px 0; }
+.error { color: #833; }
+
+.hide-for-desktop {
+	display: none;
+}
+
+/** Mobile **/
+
+@media only screen and (min-width : 320px) and (max-width : 667px) {
+
+	.hide-for-mobile {
+		display: none;
+	}
+
+	.hide-for-desktop {
+		display: block;
+	}
+
+}
+
+@import "components/layout";
+@import "components/navigation";
+@import "components/footer";
+@import "components/social";
+@import "vendor/hamburgers/hamburgers";

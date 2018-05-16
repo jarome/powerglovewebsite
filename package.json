@@ -1,0 +1,12 @@
+{
+  "name": "powerglovewebsite",
+  "version": "1.0.0",
+  "description": "Power Glove Website - Video App",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "UNLICENSED"
+}
